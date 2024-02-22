@@ -1,0 +1,18 @@
+mport sys
+import math
+import string
+
+cases = int(input().rstrip()) # this grabs the first number (how many lines to expect)
+for i in range(cases): #caseNum is the same as i in range
+    line = input().rstrip()#read all the input lines after the first one
+   
+    line = line.split(" ")
+   
+    if int(line[0]) - int(line[1]) == -14 or int(line[0]) - int(line[1]) == -12 or int(line[0]) - int(line[1]) == -9 or int(line[0]) - int(line[1]) == -7 or int(line[0]) - int(line[1]) == -6 or int(line[0]) - int(line[1]) == -1 or int(line[0]) - int(line[1]) == -3 or int(line[0]) - int(line[1]) == 2 or int(line[0]) - int(line[1]) == 3 or int(line[0]) - int(line[1]) == 4 or int(line[0]) - int(line[1]) == 6 or int(line[0]) - int(line[1]) == 7 or int(line[0]) - int(line[1]) == 8 or int(line[0]) - int(line[1]) == 9 or int(line[0]) - int(line[1]) == 10 or int(line[0]) - int(line[1]) == 11:
+        print("1")
+    elif int(line[0]) - int(line[1]) == -15 or int(line[0]) - int(line[1]) == -13 or int(line[0]) - int(line[1]) == -11 or int(line[0]) - int(line[1]) == -10 or int(line[0]) - int(line[1]) == -8 or int(line[0]) - int(line[1]) == -5 or int(line[0]) - int(line[1]) == -4 or int(line[0]) - int(line[1]) == -2 or int(line[0]) - int(line[1]) == 1 or int(line[0]) - int(line[1]) == 5 or int(line[0]) - int(line[1]) == 12:
+        print("2")
+    else:
+        print("1")
+   
+    #print(int(line[0]) - int(line[1]))

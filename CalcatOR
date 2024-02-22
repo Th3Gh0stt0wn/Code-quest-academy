@@ -1,0 +1,24 @@
+import sys
+import math
+import string
+
+cases = int(input().rstrip()) # this grabs the first number (how many lines to expect)
+for i in range(cases): #caseNum is the same as i in range
+    line = input().rstrip()#read all the input lines after the first one
+   
+    def better_round(val:float, n_digits:int = 0):
+        val *= 10**n_digits
+        result = int(val + (0.5 if val >= 0 else -0.5))
+        return result / 10**n_digits
+   
+    line = line.split(" ")
+   
+   
+    if line[1] == "+":
+        print(float(line[0]) + float(line[2]), float(line[2]) + float(line[0]))
+    elif line[1] == "-":
+        print(float(line[0]) - float(line[2]), float(line[2]) - float(line[0]))
+    elif line[1] == "*":
+        print(float(line[0]) * float(line[2]), float(line[2]) * float(line[0]))
+    elif line[1] == "/":
+        print(better_round(float(line[0]) / float(line[2]), 1), better_round(float(line[2]) / float(line[0]), 1))
